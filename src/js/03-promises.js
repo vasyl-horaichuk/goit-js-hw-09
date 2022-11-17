@@ -6,9 +6,9 @@ formRef.addEventListener('submit', onFormSubmit);
 function onFormSubmit(e) { 
   e.preventDefault();
 
-  let delay = e.currentTarget.delay.value;
-  const step = e.currentTarget.step.value;
-  const amount = e.currentTarget.amount.value;
+  let delay = Number(e.currentTarget.delay.value);
+  const step =  Number(e.currentTarget.step.value);
+  const amount = Number(e.currentTarget.amount.value);
 
   for (let position = 1; position <= amount; position += 1) {
     createPromise(position, delay)
